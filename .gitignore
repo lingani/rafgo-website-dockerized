@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv_rafgo/
+
+# Docker-compose config
+docker-compose.yml
+
+# DS Store
+.DS_Store
