@@ -1,0 +1,62 @@
+{% load i18n %}
+{% load static %}
+
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+<header id="header" class="header fixed-top" data-scrollto-offset="0">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <a href="{{menu_principal.first.href}}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="{% static 'assets/img/logo.jpg' %}" alt="RAFGO">
+      <!-- <h1>RAFGO<span>.</span></h1> -->
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        {% for m_item in menu_principal %} 
+          <li><a class="nav-link scrollto" href="{{m_item.href}}"><span> {% trans m_item.name %}</span></a></li>
+        {% endfor %} 
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle d-none"></i>
+    </nav><!-- .navbar -->
+
+    <a class="btn-getstarted scrollto" href="{{action_menu.href}}">{% trans action_menu.name %}</a>
+    
+    <!-- <div class="languages">
+        <p>{% trans "Langue" %}:</p>
+        <ul class="languages">
+          {% for language in languages %}
+            <li>
+              <a href="/{{ language.code }}/"
+                {% if language.code == CURRENT_LANGUAGE %} class="active"{% endif %}>
+                {{ language.name_local }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div> -->
+
+    <style>
+      select {
+        font-family: 'FontAwesome', 'sans-serif';
+        font-weight: 900;
+      }
+    </style>
+
+    <div class="js">
+      <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
+        <form action="" class="language-picker__form">
+          <label for="language-picker-select"></i></label>
+          <select onchange="location = this.value;">
+            <option id="lang" lang="en" value="/fr/home">&#xf1ab;</i></option>
+            {% for language in languages %}
+              <option lang="{{ language.code }}" value="/{{ language.code }}/home">{{ language.name_local|title }}</option>
+            {% endfor %}
+          </select>
+        </form>
+      </div>
+    </div>
+</header>

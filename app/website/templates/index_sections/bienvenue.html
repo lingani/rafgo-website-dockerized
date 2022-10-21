@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load static %}
+  <!-- ======= Welcome ======= -->
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      <img src="{% static 'assets/img/hero-carousel/hero-carousel-8.png' %}" class="img-fluid animated">
+      <h2>{% trans 'Bienvenue au' %} <span>RAFGO</span></h2>
+      <p>{% trans  "Réseau des Organisations de la Société Civile d'Afrique Francophone pour le Gouvernement Ouvert" %}</p>
+
+      <div class="d-flex">
+        <a href="#featured-services" class="btn-get-started scrollto">{% trans "Chiffres Clés" %} <i class="bi bi-graph-up-arrow"></i></a>
+        <!-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+      </div>
+    </div>
+  </section><!-- End Welcome Section -->

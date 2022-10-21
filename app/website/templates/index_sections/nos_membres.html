@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load static %}
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio" data-aos="fade-up">
+
+      <div class="container">
+
+        <div class="section-header">
+          <h2>{% trans 'Nos Membres' %}</h2>
+          <p>{% trans "De Madagascar à la Tunisie et de la Guinée à au Chad, decouvrez notre vibrante communauté de reformateurs" %}</p>
+        </div>
+
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="portfolio-isotope" data-portfolio-filter=".filter-sampled" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+          <ul class="portfolio-flters">
+            <li data-filter=".filter-sampled" class="filter-active">{% trans "Aperçu" %}</li>
+            {% for p in countries %}
+              <li data-filter=".filter-{{p.code}}">{{p.name}}</li>
+            {% endfor %}
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row g-0 portfolio-container">
+            <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-sampled">
+              <img src="{% static 'assets/img/portfolio/books-3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Books 3</h4>
+                <a href="assets/img/portfolio/books-3.jpg' %}" title="Branding 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="../member-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div> -->
+            <!-- End Portfolio Item -->
+
+            {% for org in orgs %}
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item  filter-{{org.country.code}} {% if org in sample_orgs %} filter-sampled {% endif %}">
+              <img class="card-img-top" alt="..." src="{% if org.image_logo %} {{org.image_logo.url}} {% else %} {% static 'assets/img/default_logo.png' %} {% endif %}">
+              <div class="card">
+                <div class="card-body">
+                  <h4>{{org.short_name}}</h4>
+                  <p class="card-text">{{org.shorten_description}}</p>
+                </div>
+                <div class="portfolio-info">
+                  <!-- <a href="assets/img/portfolio/app-1.jpg' %}" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                  <a href="../member-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            {% endfor %}
+
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->

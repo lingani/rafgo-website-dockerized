@@ -1,0 +1,112 @@
+{% load i18n %}
+{% load static %}
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>{% trans "A Propos" %}</h2>
+          <p>{% trans "Une communauté vibrante d'organisations de la Société Civile d'Afrique francophone oeuvrant pour le développement durable et inclusif à travers la promotion des principes du Gouvernement Ouvert." %}</p>
+        </div>
+
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-5">
+            <div class="about-img">
+              <img src="{% static 'assets/img/about2.jpg' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <h3 class="pt-0 pt-lg-5">{% trans "Nous sommes une communauté d'une cinquantaine d'organisation issue de 15 pays francophone d'Afrique." %}</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">{% trans 'Objectifs' %}</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">{% trans 'Valeurs' %}</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">{% trans 'Articles de Gouvernance' %}</a></li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <div class="tab-pane fade show active" id="tab1">
+
+                        <p class="fst-italic">{% trans "L'objectif ultime du projet est de catalyser un développement durable et inclusif en contribuant à rendre les gouvernements d'Afrique francophone plus transparents, redevables et sensibles à leurs citoyens. Les objectifs spécifiques sont:" %}</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Créer, structurer et pérenniser le réseau" %}</h4>
+                </div>
+                <p>{% trans "Organiser les OSC en réseau et en groupe selon les thématiques clé du PGO afin de promouvoir les principes du Gouvernement Ouvert et l'apprentissage par les pairs. Développer des partenariats et lever de fonds pour soutenir le réseau et les projets des membres" %}</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Renforcer la collaboration entre gouvernants et OSC" %}</h4>
+                </div>
+                <p>{% trans "Renforcer la confiance et la collaboration entre les gouvernements et la société civile en soutenant  les réformateurs de chaque bord vers un leadership en matière de gouvernement ouvert;" %}</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Accompagner les pays à adhérer au PGO" %}</h4>
+                </div>
+                <p>{% trans "Booster l'adhésion des pays Francophone d'Afrique au PGO et les accompagner dans leurs processus de co-création et de co-implémentation à travers la mise à disposition de ressources." %}</p>
+
+              </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+
+                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                </div>
+                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                </div>
+                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                </div>
+                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
+
+              </div><!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade show" id="tab3">
+
+                <p class="fst-italic">{% trans "Le RAFGO a adopté une charte pour guider ses grandes orientations. Un statu juridique d'association de droit Burkinabè regit le réseau avec en appui un règlement interieur." %}</p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Charte du RAFGO" %}</h4>
+                </div>
+                <p>{% trans "Elle definie un forum de dialogue et de collaboration entre ONG et OSC d'Afrique francophone. Elle souscrit aux conventions internationales relatives  à la bonne gouvernance et au droits humain." %} <a href="#"> {% trans "Lire la charte" %}<a/></p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Les Statuts du RAFGO" %}</h4>
+                </div>
+                <p>{% trans "Le RAFGO a un statu Juridique d'association de droit burkinabè conformement à la loi n° 064-2015/cnt portant liberte d'association." %} <a href="#"> {% trans "Lire les statuts" %}</a></p>
+
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-check2"></i>
+                  <h4>{% trans "Le Règlement Interieur (RI) du RAFGO" %}</h4>
+                </div>
+                <p>{% trans "Un règlement intérieur precice les dispositions des status et établi les procedures de fonctionnement de l'organisation." %} <a href="#"> {% trans "Lire le RI" %}</a></br></br></p>
+
+              </div><!-- End Tab 3 Content -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->

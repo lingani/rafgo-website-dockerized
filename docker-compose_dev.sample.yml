@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  djangoapp:
+    build: .
+    environment:
+      - SECRET_KEY='dn5r%w&&+@=@7q+hu35@l=#*0%m6@ti_x0*is5kr$vo+kc'
+    volumes:
+      - .:/opt/services/djangoapp/src
+      - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
+      - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+    networks:
+      - nginx_network
+
+  nginx:
+    image: pagespeed/nginx-pagespeed:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
+      - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+    depends_on:
+      - djangoapp
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
+
+volumes:
+  static_volume:  # <-- declare the static volume
+  media_volume:  # <-- declare the media volume
