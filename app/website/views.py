@@ -5,7 +5,7 @@ import random
 
 menu_principal = Menu()
 
-orgs = Organization.objects.all()
+orgs = Organization.objects.order_by("country", "name")
 countries = list(set([org.country for org in orgs]))
 countries.sort(key=lambda c: c.name)
 
