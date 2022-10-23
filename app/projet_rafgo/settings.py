@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", 'dn5r%w&&+@=@7q+hu35@l=#*0%m6@ti_x0*is
 # DEBUG = True
 DEBUG = int(os.environ.get("DEBUG", default=1))
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split("-")
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split("-")
 # Application definition
 
 INSTALLED_APPS = [
