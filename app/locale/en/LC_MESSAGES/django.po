@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 19:22+0000\n"
+"POT-Creation-Date: 2022-10-23 11:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: projet_rafgo/settings.py:121
+#: projet_rafgo/settings.py:132
 msgid "Anglais"
 msgstr "English"
 
-#: projet_rafgo/settings.py:122
+#: projet_rafgo/settings.py:133
 msgid "Français"
 msgstr "French"
 
-#: projet_rafgo/settings.py:123
+#: projet_rafgo/settings.py:134
 msgid "Espagnole"
 msgstr "Spanish"
 
-#: projet_rafgo/urls.py:24
+#: projet_rafgo/urls.py:27
 msgid "admin/"
-msgstr ""
+msgstr "admin/"
+
+#: website/templates/blog-details.html:10
+#: website/templates/blog-details.html:63
+msgid "Détails de Blog"
+msgstr "Blog Details"
+
+#: website/templates/blog-details.html:65 website/templates/blog.html:64
+#: website/templates/index.html:10 website/templates/member-details.html:65
+msgid "Accueil"
+msgstr "Home"
+
+#: website/templates/blog-details.html:67
+msgid "Détails"
+msgstr "Details"
+
+#: website/templates/blog-details.html:265
+msgid "Laissez un commentaire"
+msgstr "Leave a Reply"
+
+#: website/templates/blog-details.html:286
+msgid "Soumettez le commentaire"
+msgstr "Post Comment"
+
+#: website/templates/blog-details.html:301 website/templates/blog.html:291
+msgid "Recherche"
+msgstr "Search"
+
+#: website/templates/blog-details.html:321
+#: website/templates/blog-details.html:367 website/templates/blog.html:311
+#: website/templates/blog.html:357
+msgid "Articles Réçents"
+msgstr "Recent Posts"
+
+#: website/templates/blog.html:108 website/templates/blog.html:140
+#: website/templates/blog.html:172 website/templates/blog.html:204
+#: website/templates/blog.html:236 website/templates/blog.html:268
+#: website/templates/index_sections/blogs_recents.html:24
+#: website/templates/index_sections/blogs_recents.html:37
+#: website/templates/index_sections/blogs_recents.html:50
+#: website/templates/index_sections/en_savoir_plus.html:25
+msgid "Lire Plus"
+msgstr "Read More"
+
+#: website/templates/footer.html:13
+msgid "Phone"
+msgstr "Phone"
+
+#: website/templates/footer.html:14
+msgid "Email"
+msgstr "Email"
+
+#: website/templates/footer.html:20
+msgid "Liens Utiles"
+msgstr "Useful Links"
+
+#: website/templates/footer.html:22
+msgid "PGO"
+msgstr "OGP"
+
+#: website/templates/footer.html:23
+msgid "PGO - Page Afrique"
+msgstr "OGP - Africa Page"
+
+#: website/templates/footer.html:24
+msgid "Open Stories"
+msgstr "Open Stories"
+
+#: website/templates/footer.html:25
+msgid "PAGOF"
+msgstr "PAGOF"
+
+#: website/templates/footer.html:30
+msgid "Ressources"
+msgstr "Resources"
+
+#: website/templates/footer.html:32
+msgid "Blog"
+msgstr "Blog"
+
+#: website/templates/footer.html:33
+msgid "Données d'éligibilité au PGO"
+msgstr "OGP Eligibility Data"
+
+#: website/templates/footer.html:34
+msgid "Le guide du PGO pour les sceptiques"
+msgstr "The Skeptic's Guide to OGP"
+
+#: website/templates/footer.html:35
+#: website/templates/index_sections/a_propos.html:87
+msgid "Charte du RAFGO"
+msgstr "RAFGO Charter"
 
 #: website/templates/footer.html:40
 msgid "Bulletins d'information"
@@ -42,7 +133,11 @@ msgstr "Our Newsletter"
 msgid "Restez à jour avec le RAFGO en vous abonnant maintenant."
 msgstr "Stay up-to-date with RAFGO by subscribing now."
 
-#: website/templates/header.html:27
+#: website/templates/footer.html:57
+msgid "Tous Droits Reservés"
+msgstr "All Rights Reserved"
+
+#: website/templates/header.html:28
 msgid "Langue"
 msgstr "Language"
 
@@ -64,10 +159,10 @@ msgstr ""
 
 #: website/templates/index_sections/a_propos.html:21
 msgid ""
-"Nous sommes une communauté d'une cinquantaine d'organisation issue de 15 "
+"Nous sommes une communauté d'une cinquantaine d'organisation issue de 16 "
 "pays francophone d'Afrique."
 msgstr ""
-"We are a community of around 50 organizations from 15 French speaking "
+"We are a community of around 50 organizations from 16 French speaking "
 "country in Africa."
 
 #: website/templates/index_sections/a_propos.html:25
@@ -108,7 +203,7 @@ msgstr ""
 
 #: website/templates/index_sections/a_propos.html:45
 msgid "Renforcer la collaboration entre gouvernants et OSC"
-msgstr ""
+msgstr "Strengthen collaboration between governments and CSOs"
 
 #: website/templates/index_sections/a_propos.html:47
 msgid ""
@@ -116,10 +211,11 @@ msgid ""
 "société civile en soutenant  les réformateurs de chaque bord vers un "
 "leadership en matière de gouvernement ouvert;"
 msgstr ""
+"Build trust and collaboration between governments and civil society by supporting reformers on both sides towards open government leadership;"
 
 #: website/templates/index_sections/a_propos.html:51
 msgid "Accompagner les pays à adhérer au PGO"
-msgstr ""
+msgstr "Supporting countries to join OGP"
 
 #: website/templates/index_sections/a_propos.html:53
 msgid ""
@@ -127,6 +223,10 @@ msgid ""
 "dans leurs processus de co-création et de co-implémentation à travers la "
 "mise à disposition de ressources."
 msgstr ""
+"Catalyse the adhesion of French-speaking African "
+"countries to OGP and support them "
+"in their co-creation and co-implementation processes " 
+"through the provision of resources."
 
 #: website/templates/index_sections/a_propos.html:83
 msgid ""
@@ -134,18 +234,49 @@ msgid ""
 "juridique d'association de droit Burkinabè regit le réseau avec en appui un "
 "règlement interieur."
 msgstr ""
+"RAFGO has adopted a charter to guide its major orientations. A legal status of association under Burkinabè law governs the network with the support of an internal governance document."
 
-#: website/templates/index_sections/a_propos.html:87
-msgid "Charte du RAFGO"
+#: website/templates/index_sections/a_propos.html:89
+msgid ""
+"Elle definie un forum de dialogue et de collaboration entre ONG et OSC "
+"d'Afrique francophone. Elle souscrit aux conventions internationales "
+"relatives  à la bonne gouvernance et au droits humain."
+msgstr ""
+"It defines a forum for dialogue and collaboration between NGOs and CSOs in French-speaking Africa. It subscribes to international conventions relating to good governance and human rights."
+
+#: website/templates/index_sections/a_propos.html:89
+msgid "Lire la Charte"
 msgstr ""
 
 #: website/templates/index_sections/a_propos.html:93
 msgid "Les Statuts du RAFGO"
+msgstr "Read the Charter"
+
+#: website/templates/index_sections/a_propos.html:95
+msgid ""
+"Le RAFGO a un statu Juridique d'association de droit burkinabè conformement "
+"à la loi n° 064-2015/cnt portant liberte d'association."
 msgstr ""
+"RAFGO has the legal status of an association under Burkinabè law in accordance with Law No. 064-2015/cnt on freedom of association."
+
+#: website/templates/index_sections/a_propos.html:95
+msgid "Lire les statuts"
+msgstr "Read the Bylaws"
 
 #: website/templates/index_sections/a_propos.html:99
-msgid "Le Règlement Interieur du RAFGO"
+msgid "Le Règlement Interieur (RI) du RAFGO"
+msgstr "The Internal Governance Document (IGD) of RAFGO"
+
+#: website/templates/index_sections/a_propos.html:101
+msgid ""
+"Un règlement intérieur precice les dispositions des status et établi les "
+"procedures de fonctionnement de l'organisation."
 msgstr ""
+"An Internal Governance Document (IGD) specifies the provisions of the bylaws and defines the operating procedures of the organization."
+
+#: website/templates/index_sections/a_propos.html:101
+msgid "Lire le RI"
+msgstr "Read the IGD"
 
 #: website/templates/index_sections/bienvenue.html:7
 msgid "Bienvenue au"
@@ -165,6 +296,24 @@ msgstr "Key figures"
 #: website/templates/index_sections/blogs_recents.html:10
 msgid "Nos récents articles de blog"
 msgstr "Recent posts form our Blog"
+
+#: website/templates/index_sections/call_to_action.html:10
+msgid "Le RAFGO, un <em>Réseau Ouvert</em> qui n'attend que vous"
+msgstr ""
+"RAFGO, an <em>Open Network</em> waiting for you"
+
+#: website/templates/index_sections/call_to_action.html:11
+msgid ""
+"Le développement durable et inclusif de votre pays vous  tient à coeur?  "
+"vous êtes engagé à promouvoir la démocratie? Vous êtes une organistion de la "
+"société civile d'Afrique Francophone? Notre communauté de reformateurs est "
+"ouverte et prête à vous accuellir."
+msgstr ""
+"Are you committed to the sustainable and inclusive development of your country? Are you committed to promoting democracy? Are you a civil society organization based in Francophone Africa? Our community of reformers is open and ready to welcome you."
+
+#: website/templates/index_sections/call_to_action.html:12
+msgid "Rejoignez-Nous"
+msgstr "Join Us"
 
 #: website/templates/index_sections/contact.html:8
 msgid "Nous Contacter"
@@ -194,6 +343,18 @@ msgstr "Email"
 #: website/templates/index_sections/contact.html:47
 msgid "Tél.:"
 msgstr "Call:"
+
+#: website/templates/index_sections/contact.html:73
+msgid "Chargement"
+msgstr "Loading"
+
+#: website/templates/index_sections/contact.html:75
+msgid "Votre message a été envoyé. Merci!"
+msgstr "Your Message has been submited. Thank You!"
+
+#: website/templates/index_sections/contact.html:77
+msgid "Envoyé le Message"
+msgstr "Submit the Message"
 
 #: website/templates/index_sections/en_savoir_plus.html:13
 msgid "En savoir plus sur le Parténariat pour le Gouvernement Ouvert (PGO)"
@@ -245,15 +406,11 @@ msgid ""
 "redevabilité."
 msgstr "Tap on the use of new technologies to promote accountability."
 
-#: website/templates/index_sections/en_savoir_plus.html:25
-msgid "Lire Plus"
-msgstr "Read More"
-
 #: website/templates/index_sections/featured.html:7
 msgid ""
 "Quelques chiffres, pas pour l'amour des chiffres mais pour l'optimisme "
-"projeté"
-msgstr "Some figures, not for the sake of numbers but for projected optimism"
+"projeté; toutefois, nous aimons les données."
+msgstr "Some figures, not for the sake of numbers but for projected optimism. However, we Love Data."
 
 #: website/templates/index_sections/featured.html:14
 msgid "Personnes"
@@ -261,8 +418,8 @@ msgstr "People"
 
 #: website/templates/index_sections/featured.html:15
 msgid ""
-"Des reformateurs/trices engagé(e)s qui échangent au quptidient pour innover "
-"la Démocratie"
+"Des reformateurs/trices engagé(e)s qui échangent au quotidient pour innover "
+"la Démocratie."
 msgstr ""
 "Committed reformers who exchange on a daily basis to innovate Democracy"
 
@@ -273,36 +430,36 @@ msgstr "Organizations"
 #: website/templates/index_sections/featured.html:23
 msgid ""
 "Des organisations de femmes et de jeunes très dynamiques issues des "
-"communautés"
+"communautés."
 msgstr "Very dynamic women and youth organizations rooted in their communities"
 
 #: website/templates/index_sections/featured.html:30
-msgid "18 Pays"
-msgstr "18 Countries"
+msgid "Pays"
+msgstr "Countries"
 
 #: website/templates/index_sections/featured.html:31
 msgid ""
 "Des pays membres et aspirants membres du PGO ayants en commun la langue "
-"française"
+"française."
 msgstr ""
 "Both member and aspiring member countries of the OGP having in common the "
 "French language"
 
 #: website/templates/index_sections/featured.html:38
-msgid "30 Projets"
-msgstr "30 Projects"
+msgid "Projets"
+msgstr "Projects"
 
 #: website/templates/index_sections/featured.html:39
 msgid ""
 "Des projets transformateurs pour un développement durable et inclusif de la "
-"région"
+"région."
 msgstr ""
 "Transformative projects for sustainable and inclusive development of the "
 "region"
 
 #: website/templates/index_sections/nos_membres.html:9
 msgid "Nos Membres"
-msgstr "Members"
+msgstr "Our Members"
 
 #: website/templates/index_sections/nos_membres.html:10
 msgid ""
@@ -312,23 +469,65 @@ msgstr ""
 "From Madagascar to Tunisia and from Guinea to Chad, discover our vibrant "
 "community of reformers"
 
-#: website/templates/index_sections/nos_partenaires.html:7
-#, fuzzy
-#| msgid "Nos Projets"
+#: website/templates/index_sections/nos_membres.html:20
+msgid "Aperçu"
+msgstr "Sample"
+
+#: website/templates/index_sections/nos_partenaires.html:8
 msgid "Nos Partenaires"
-msgstr "Projects"
+msgstr "Our Partners"
+
+#: website/templates/index_sections/nos_partenaires.html:9
+msgid ""
+"Nous remercions nos partenaires qui ne ménagent aucun effort pour nous "
+"accompager dans notre mission."
+msgstr "We thank our partners who spare no effort to support us in our mission."
 
 #: website/templates/index_sections/nos_projets.html:8
 msgid "Nos Projets"
-msgstr "Projects"
+msgstr "Our Projects"
 
 #: website/templates/index_sections/nos_projets.html:9
 msgid ""
 "Promouvoir la Transparence, la Participation citoyenne, la Redevabilité et "
-"l'usage de la technologie pour innover la démocratie."
+"l'usage de la technologie pour innover la démocratie.</br>20 projets portés "
+"par des membres  seront financés et couvriront les 3 volets suivants:"
 msgstr ""
 "Promote Transparency, Citizen Participation, Accountability and the use of "
-"technology to innovate democracy."
+"technology to innovate democracy.</br>20 member-driven projects will be funded and will cover the following 3 components:"
+
+#: website/templates/index_sections/nos_projets.html:24
+msgid "Volet 1"
+msgstr "Component 1"
+
+#: website/templates/index_sections/nos_projets.html:26
+msgid ""
+"Booster l'adhésion des pays de la région au PGO et améliorer les scores de "
+"ceux déjà membres."
+msgstr ""
+"Boost the membership of countries in the region in the OGP and improve the scores of those already members."
+
+#: website/templates/index_sections/nos_projets.html:41
+msgid "Volet 2"
+msgstr "Component 2"
+
+#: website/templates/index_sections/nos_projets.html:43
+msgid ""
+"Impulser et soutenir une dynamique de PGO local dans les municipalités et "
+"collectivités territoriales des pays membres."
+msgstr ""
+"Stimulate and support OGP local dynamic in the municipalities and local territories of the member countries."
+
+#: website/templates/index_sections/nos_projets.html:58
+msgid "Volet 3"
+msgstr "Component 3"
+
+#: website/templates/index_sections/nos_projets.html:60
+msgid ""
+"Renforcer les capacité des membres en matière de gouvernement ouvert et "
+"pérenniser le réseau."
+msgstr ""
+"Build members' capacity for open government and sustain the network"
 
 #: website/templates/index_sections/notre_leadership.html:8
 msgid "Notre Leadership"
@@ -337,7 +536,7 @@ msgstr "Leadership"
 #: website/templates/index_sections/notre_leadership.html:9
 msgid ""
 "Un conseil consultatif rotatif de 3 Membres se charge des orientations "
-"stratégiques du Réseau"
+"stratégiques du Réseau. Un secrétariat basé à BEOG NEERE assure l'exécutif."
 msgstr ""
 "A rotating advisory board of 3 members is responsible for the strategic "
 "orientations of the Network"
@@ -356,27 +555,37 @@ msgstr "1st Vice-Chair"
 
 #: website/templates/index_sections/notre_leadership.html:47
 msgid "Maroc"
-msgstr "Moroco"
+msgstr "Morocco"
 
 #: website/templates/index_sections/notre_leadership.html:65
 msgid "2ème Vice-Président"
 msgstr "2nd Vice-Chair"
 
-#: website/templates/index_sections/notre_leadership.html:66
-msgid "Cameroune"
+#: website/templates/index_sections/
+msgid "Cameroun"
 msgstr "Cameroon"
 
-#: website/templates/member-details.html:65
-#: website/templates/member-details.html:68
+#: website/templates/member-details.html:10
+msgid "Détails de Membre"
+msgstr "Member Details"
+
+#: website/templates/member-details.html:63
+#: website/templates/member-details.html:66
 msgid "Détails de l'organisation"
 msgstr "Organization Details"
 
-#: website/templates/member-details.html:67
-msgid "Accueil"
-msgstr "Home"
+#: website/templates/project-details.html:9
+msgid "Détails de Projet"
+msgstr "Project Details"
 
-#~ msgid "Blog"
-#~ msgstr "Blog"
+#: website/templates/project-details.html:62
+#: website/templates/project-details.html:65
+msgid "Détails du Projet"
+msgstr "Project Details"
+
+#: website/templates/project-details.html:105
+msgid "Informations du Projet"
+msgstr "Project Informations"
 
 msgid "Nous Rejoindre"
 msgstr "Join Us"

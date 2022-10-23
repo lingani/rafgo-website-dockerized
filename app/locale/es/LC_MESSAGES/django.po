@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 19:22+0000\n"
+"POT-Creation-Date: 2022-10-23 11:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +18,111 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: projet_rafgo/settings.py:121
+#: projet_rafgo/settings.py:132
 msgid "Anglais"
 msgstr "Inglés"
 
-#: projet_rafgo/settings.py:122
+#: projet_rafgo/settings.py:133
 msgid "Français"
 msgstr "Francés"
 
-#: projet_rafgo/settings.py:123
+#: projet_rafgo/settings.py:134
 msgid "Espagnole"
 msgstr "Español"
 
-#: projet_rafgo/urls.py:24
+#: projet_rafgo/urls.py:27
 msgid "admin/"
+msgstr ""
+
+#: website/templates/blog-details.html:10
+#: website/templates/blog-details.html:63
+msgid "Détails de Blog"
+msgstr ""
+
+#: website/templates/blog-details.html:65 website/templates/blog.html:64
+#: website/templates/index.html:10 website/templates/member-details.html:65
+msgid "Accueil"
+msgstr "Inicio"
+
+#: website/templates/blog-details.html:67
+msgid "Détails"
+msgstr ""
+
+#: website/templates/blog-details.html:265
+msgid "Laissez un commentaire"
+msgstr ""
+
+#: website/templates/blog-details.html:286
+msgid "Soumettez le commentaire"
+msgstr ""
+
+#: website/templates/blog-details.html:301 website/templates/blog.html:291
+msgid "Recherche"
+msgstr ""
+
+#: website/templates/blog-details.html:321
+#: website/templates/blog-details.html:367 website/templates/blog.html:311
+#: website/templates/blog.html:357
+msgid "Articles Réçents"
+msgstr ""
+
+#: website/templates/blog.html:108 website/templates/blog.html:140
+#: website/templates/blog.html:172 website/templates/blog.html:204
+#: website/templates/blog.html:236 website/templates/blog.html:268
+#: website/templates/index_sections/blogs_recents.html:24
+#: website/templates/index_sections/blogs_recents.html:37
+#: website/templates/index_sections/blogs_recents.html:50
+#: website/templates/index_sections/en_savoir_plus.html:25
+msgid "Lire Plus"
+msgstr ""
+
+#: website/templates/footer.html:13
+msgid "Phone"
+msgstr ""
+
+#: website/templates/footer.html:14
+msgid "Email"
+msgstr ""
+
+#: website/templates/footer.html:20
+msgid "Liens Utiltes"
+msgstr ""
+
+#: website/templates/footer.html:22
+msgid "PGO"
+msgstr ""
+
+#: website/templates/footer.html:23
+msgid "PGO - Page Afrique"
+msgstr ""
+
+#: website/templates/footer.html:24
+msgid "Open Stories"
+msgstr ""
+
+#: website/templates/footer.html:25
+msgid "PAGOF"
+msgstr ""
+
+#: website/templates/footer.html:30
+msgid "Ressources"
+msgstr ""
+
+#: website/templates/footer.html:32
+msgid "Blog"
+msgstr "Blog"
+
+#: website/templates/footer.html:33
+msgid "Données d'éligibilité au PGO"
+msgstr ""
+
+#: website/templates/footer.html:34
+msgid "Le guide du PGO pour les sceptiques"
+msgstr ""
+
+#: website/templates/footer.html:35
+#: website/templates/index_sections/a_propos.html:87
+msgid "Charte du RAFGO"
 msgstr ""
 
 #: website/templates/footer.html:40
@@ -42,7 +133,11 @@ msgstr ""
 msgid "Restez à jour avec le RAFGO en vous abonnant maintenant."
 msgstr ""
 
-#: website/templates/header.html:27
+#: website/templates/footer.html:57
+msgid "Tous Droits Reservés"
+msgstr ""
+
+#: website/templates/header.html:28
 msgid "Langue"
 msgstr "Lengua"
 
@@ -131,16 +226,43 @@ msgid ""
 "règlement interieur."
 msgstr ""
 
-#: website/templates/index_sections/a_propos.html:87
-msgid "Charte du RAFGO"
+#: website/templates/index_sections/a_propos.html:89
+msgid ""
+"Elle definie un forum de dialogue et de collaboration entre ONG et OSC "
+"d'Afrique francophone. Elle souscrit aux conventions internationales "
+"relatives  à la bonne gouvernance et au droits humain."
+msgstr ""
+
+#: website/templates/index_sections/a_propos.html:89
+msgid "Lire la Charte"
 msgstr ""
 
 #: website/templates/index_sections/a_propos.html:93
 msgid "Les Statuts du RAFGO"
 msgstr ""
 
+#: website/templates/index_sections/a_propos.html:95
+msgid ""
+"Le RAFGO a un statu Juridique d'association de droit burkinabè conformement "
+"à la loi n° 064-2015/cnt portant liberte d'association."
+msgstr ""
+
+#: website/templates/index_sections/a_propos.html:95
+msgid "Lire les statuts"
+msgstr ""
+
 #: website/templates/index_sections/a_propos.html:99
-msgid "Le Règlement Interieur du RAFGO"
+msgid "Le Règlement Interieur (RI) du RAFGO"
+msgstr ""
+
+#: website/templates/index_sections/a_propos.html:101
+msgid ""
+"Un règlement intérieur precice les dispositions des status et établi les "
+"procedures de fonctionnement de l'organisation."
+msgstr ""
+
+#: website/templates/index_sections/a_propos.html:101
+msgid "Lire le RI"
 msgstr ""
 
 #: website/templates/index_sections/bienvenue.html:7
@@ -161,6 +283,22 @@ msgstr ""
 
 #: website/templates/index_sections/blogs_recents.html:10
 msgid "Nos récents articles de blog"
+msgstr ""
+
+#: website/templates/index_sections/call_to_action.html:10
+msgid "Le RAFGO, un <em>Réseau Ouvert</em> qui n'attend que vous"
+msgstr ""
+
+#: website/templates/index_sections/call_to_action.html:11
+msgid ""
+"Le développement durable et inclusif de votre pays vous  tient à coeur?  "
+"vous êtes engagé à promouvoir la démocratie? Vous êtes une organistion de la "
+"société civile d'Afrique Francophone? Notre communauté de reformateurs est "
+"ouverte et prête à vous accuellir."
+msgstr ""
+
+#: website/templates/index_sections/call_to_action.html:12
+msgid "Rejoignez-Nous"
 msgstr ""
 
 #: website/templates/index_sections/contact.html:8
@@ -192,6 +330,18 @@ msgstr ""
 
 #: website/templates/index_sections/contact.html:47
 msgid "Tél.:"
+msgstr ""
+
+#: website/templates/index_sections/contact.html:73
+msgid "Chargement"
+msgstr ""
+
+#: website/templates/index_sections/contact.html:75
+msgid "Votre message a été envoyé. Merci!"
+msgstr ""
+
+#: website/templates/index_sections/contact.html:77
+msgid "Envoyé le Message"
 msgstr ""
 
 #: website/templates/index_sections/en_savoir_plus.html:13
@@ -236,14 +386,10 @@ msgid ""
 "redevabilité."
 msgstr ""
 
-#: website/templates/index_sections/en_savoir_plus.html:25
-msgid "Lire Plus"
-msgstr ""
-
 #: website/templates/index_sections/featured.html:7
 msgid ""
 "Quelques chiffres, pas pour l'amour des chiffres mais pour l'optimisme "
-"projeté"
+"projeté; toutefois, nous aimons les données."
 msgstr ""
 
 #: website/templates/index_sections/featured.html:14
@@ -252,8 +398,8 @@ msgstr ""
 
 #: website/templates/index_sections/featured.html:15
 msgid ""
-"Des reformateurs/trices engagé(e)s qui échangent au quptidient pour innover "
-"la Démocratie"
+"Des reformateurs/trices engagé(e)s qui échangent au quotidient pour innover "
+"la Démocratie."
 msgstr ""
 
 #: website/templates/index_sections/featured.html:22
@@ -263,29 +409,29 @@ msgstr ""
 #: website/templates/index_sections/featured.html:23
 msgid ""
 "Des organisations de femmes et de jeunes très dynamiques issues des "
-"communautés"
+"communautés."
 msgstr ""
 
 #: website/templates/index_sections/featured.html:30
-msgid "18 Pays"
+msgid "Pays"
 msgstr ""
 
 #: website/templates/index_sections/featured.html:31
 msgid ""
 "Des pays membres et aspirants membres du PGO ayants en commun la langue "
-"française"
+"française."
 msgstr ""
 
 #: website/templates/index_sections/featured.html:38
 #, fuzzy
 #| msgid "Nos Projets"
-msgid "30 Projets"
+msgid "Projets"
 msgstr "Proyectos"
 
 #: website/templates/index_sections/featured.html:39
 msgid ""
 "Des projets transformateurs pour un développement durable et inclusif de la "
-"région"
+"région."
 msgstr ""
 
 #: website/templates/index_sections/nos_membres.html:9
@@ -298,11 +444,21 @@ msgid ""
 "vibrante communauté de reformateurs"
 msgstr ""
 
-#: website/templates/index_sections/nos_partenaires.html:7
+#: website/templates/index_sections/nos_membres.html:20
+msgid "Aperçu"
+msgstr ""
+
+#: website/templates/index_sections/nos_partenaires.html:8
 #, fuzzy
 #| msgid "Nos Projets"
 msgid "Nos Partenaires"
 msgstr "Proyectos"
+
+#: website/templates/index_sections/nos_partenaires.html:9
+msgid ""
+"Nous remercions nos partenaires qui ne ménagent aucun effort pour nous "
+"accompager dans notre mission."
+msgstr ""
 
 #: website/templates/index_sections/nos_projets.html:8
 msgid "Nos Projets"
@@ -311,7 +467,38 @@ msgstr "Proyectos"
 #: website/templates/index_sections/nos_projets.html:9
 msgid ""
 "Promouvoir la Transparence, la Participation citoyenne, la Redevabilité et "
-"l'usage de la technologie pour innover la démocratie."
+"l'usage de la technologie pour innover la démocratie.</br>20 projets portés "
+"par des membres  seront financés et couvriront les 3 volets suivants:"
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:24
+msgid "Volet 1"
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:26
+msgid ""
+"Booster l'adhésion des pays de la région au PGO et améliorer les scores de "
+"ceux déjà membres."
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:41
+msgid "Volet 2"
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:43
+msgid ""
+"Impulser et soutenir une dynamique de PGO local dans les municipalités et "
+"collectivités territoriales des pays membres."
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:58
+msgid "Volet 3"
+msgstr ""
+
+#: website/templates/index_sections/nos_projets.html:60
+msgid ""
+"Renforcer les capacité des membres en matière de gouvernement ouvert et "
+"perrenniser le réseau."
 msgstr ""
 
 #: website/templates/index_sections/notre_leadership.html:8
@@ -321,7 +508,7 @@ msgstr "Nuestro Equipo"
 #: website/templates/index_sections/notre_leadership.html:9
 msgid ""
 "Un conseil consultatif rotatif de 3 Membres se charge des orientations "
-"stratégiques du Réseau"
+"stratégiques du Réseau. Un secrétariat basé à BEOG NEERE assure l'exécutif."
 msgstr ""
 
 #: website/templates/index_sections/notre_leadership.html:27
@@ -345,20 +532,30 @@ msgid "2ème Vice-Président"
 msgstr ""
 
 #: website/templates/index_sections/notre_leadership.html:66
-msgid "Cameroune"
+msgid "Cameroun"
 msgstr ""
 
-#: website/templates/member-details.html:65
-#: website/templates/member-details.html:68
+#: website/templates/member-details.html:10
+msgid "Détails de Membre"
+msgstr ""
+
+#: website/templates/member-details.html:63
+#: website/templates/member-details.html:66
 msgid "Détails de l'organisation"
 msgstr ""
 
-#: website/templates/member-details.html:67
-msgid "Accueil"
-msgstr "Inicio"
+#: website/templates/project-details.html:9
+msgid "Détails de Projet"
+msgstr ""
 
-#~ msgid "Blog"
-#~ msgstr "Blog"
+#: website/templates/project-details.html:62
+#: website/templates/project-details.html:65
+msgid "Détails du Projet"
+msgstr ""
+
+#: website/templates/project-details.html:105
+msgid "Informations du Projet"
+msgstr ""
 
 #~ msgid "Nous Rejoindre"
 #~ msgstr "Únete a nosotros"
