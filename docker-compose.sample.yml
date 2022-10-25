@@ -6,10 +6,11 @@ services:
     build: .
     environment:
       - SECRET_KEY='dn5r%w&&+@=@7q+hu35@l=#*0%m6@ti_x0*is5kr$vo+kc'
+      - DJANGO_ALLOWED_HOSTS='127.0.0.1-localhost'
     volumes:
       - .:/opt/services/djangoapp/src
-      - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
-      - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+      - static_volume:/opt/services/djangoapp/app/staticfiles  # <-- bind the static volume
+      - media_volume:/opt/services/djangoapp/app/media  # <-- bind the media volume
     networks:
       - nginx_network
       - database1_network
@@ -22,8 +23,8 @@ services:
       - 80:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
-      - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+      - static_volume:/opt/services/djangoapp/app/staticfiles  # <-- bind the static volume
+      - media_volume:/opt/services/djangoapp/app/media  # <-- bind the media volume
     depends_on:
       - djangoapp
     networks:

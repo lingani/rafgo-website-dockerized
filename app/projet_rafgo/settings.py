@@ -77,21 +77,30 @@ WSGI_APPLICATION = 'projet_rafgo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+# Dev
+DATABASES = { 
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'database1',
-        'USER': 'database1_role',
-        'PASSWORD': 'database1_password',
-        'HOST': 'database1',
-        'PORT': '5432',
-    },
-    
-    'database2': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
+    }
 }
+
+# Production
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'database1',
+#         'USER': 'database1_role',
+#         'PASSWORD': 'database1_password',
+#         'HOST': 'database1',
+#         'PORT': '5432',
+#     },
+    
+#     'database2': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     },
+# }
 
 
 # Password validation
