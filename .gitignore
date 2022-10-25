@@ -10,4 +10,8 @@ venv_rafgo/
 docker-compose.yml
 
 # DS Store
-.DS_Store
+*.DS_Store
+
+# config files
+config/db/database1_env
+config/nginx/conf.d/local.conf
