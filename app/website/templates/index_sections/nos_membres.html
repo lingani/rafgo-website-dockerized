@@ -24,16 +24,6 @@
           </ul><!-- End Portfolio Filters -->
 
           <div class="row g-0 portfolio-container">
-            <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-sampled">
-              <img src="{% static 'assets/img/portfolio/books-3.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Books 3</h4>
-                <a href="assets/img/portfolio/books-3.jpg' %}" title="Branding 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="../member-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div> -->
-            <!-- End Portfolio Item -->
-
             {% for org in orgs %}
             <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item  filter-{{org.country.code}} {% if org in sample_orgs %} filter-sampled {% endif %}">
               <img class="card-img-top" alt="..." src="{% if org.image_logo %} {{org.image_logo.url}} {% else %} {% static 'assets/img/default_logo.png' %} {% endif %}">
@@ -43,9 +33,10 @@
                   <p class="card-text">{{org.shorten_description}}</p>
                 </div>
                 <div class="portfolio-info">
-                  <!-- <a href="assets/img/portfolio/app-1.jpg' %}" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
-                  <a href="../member-details" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                  </div>
+                  <a href="../member-details" title="View Details" class="glightbox preview-link"><i class="bi bi-eye-fill"></i></a>
+
+                  <a href="{{org.website_ul}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
             {% endfor %}

@@ -18,6 +18,12 @@ class Organization(models.Model):
     short_name = models.CharField(max_length=20, null=True)
     description = models.TextField(null=True)
     category = models.CharField(max_length=50, null=True)
+    website_url = models.URLField(max_length=256, blank=True, null=True)
+    facebooke_url = models.URLField(max_length=256, blank=True, null=True)
+    twitter_url = models.URLField(max_length=256, blank=True, null=True)
+    linkedin_url = models.URLField(max_length=256, blank=True, null=True)
+    email = models.EmailField(max_length=256, null=True)
+    phone = models.CharField(max_length=20, null=True)
     funded_date = models.DateField(null=True)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
 
