@@ -191,7 +191,7 @@ msgstr ""
 
 #: website/templates/index_sections/a_propos.html:39
 msgid "Créer, structurer et pérenniser le réseau"
-msgstr "Create, structure and sustain the network"
+msgstr "Create, structure and sustain the RAFGO network"
 
 #: website/templates/index_sections/a_propos.html:41
 msgid ""
