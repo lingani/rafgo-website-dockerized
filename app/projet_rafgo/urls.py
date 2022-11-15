@@ -24,9 +24,12 @@ from django.conf.urls.static import static
 
 urlpatterns=i18n_patterns(
     path('', include('website.urls')),
-    path(_('admin/'), admin.site.urls)
+    path(_('admin/'), admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('blog/', include('blog.urls')),
+    path('api/v1/', include('blog.api.v1.routers.routers')) 
     # re_path(r'^rosetta/', include('rosetta.urls'))
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns.extend(static(settings.STATIC_URL, document_root=settings.STATIC_ROOT))

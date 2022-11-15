@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load static %}
+<!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row justify-content-center gy-6">
+
+          <div class="col-lg-5 col-md-12">
+            <img src="{% static 'assets/img/hero-carousel/rafgo_map.png' %}" alt="" class="img-fluid2 img">
+          </div>
+
+          <div class="col-lg-9 text-center">
+            <h2>{% trans 'Bienvenue au' %} <span>RAFGO</span></h2>
+            <p>{% trans  "Réseau des Organisations de la Société Civile d'Afrique Francophone pour le Gouvernement Ouvert" %}</p>
+            <a href="#featured-services" class="btn-get-started scrollto">{% trans "Chiffres Clés" %} <i class="bi bi-graph-up-arrow"></i></a>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End Carousel Item -->
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row justify-content-center gy-6">
+
+          <div class="col-lg-8 col-md-12">
+            <img src="{% static 'assets/img/hero-carousel/lancement_rafgo.jpg' %}" alt="" class="img-fluid2 img">
+          </div>
+
+          <div class="col-lg-9 text-center">
+            <h2>Lancement officiel du RAFGO</h2>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+            <a href="#featured-services" class="btn-get-started scrollto ">Lire l'article</a>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End Carousel Item -->
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row justify-content-center gy-6">
+
+          <div class="col-lg-8 col-md-12">
+            <img src="{% static 'assets/img/hero-carousel/ogp_morroco_2022.jpg' %}" alt="" class="img-fluid2 img">
+          </div>
+
+          <div class="col-lg-9 text-center">
+            <h2>Réunion Afrique et Moyen-Orient du PGO</h2>
+            <p>OGPMorocco2022: une reunion à Marrakech sur le thème principal de l'amélioration des services publics dans la région</p>
+            <a href="#featured-services" class="btn-get-started scrollto ">Lire l'article</a>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- End Carousel Item -->
+
+    <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+    <ol class="carousel-indicators"></ol>
+
+  </section><!-- End Hero Section -->

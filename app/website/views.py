@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .menu import Menu
 from .models import Country, Organization #import models
+from blog.models.article_models import Article
 import random
 
 menu_principal = Menu()
@@ -33,7 +34,10 @@ def index(request):
 
 
 def blog(request):
+    articles = Article.objects.all()
+    print([art.title for art in articles])
     context = {
+        'articles': articles,
         'page' : "blog",
         'menu_principal': menu_principal.get_page_menus("blog"),
         'action_menu': {"href":"../home", "name":"Nous Rejoindre"}

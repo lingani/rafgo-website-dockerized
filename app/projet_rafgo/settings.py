@@ -40,6 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'rosetta',
+    'django_filters',
+    'rest_framework',
+    'taggit',
+    'ckeditor',
+    'ckeditor_uploader',
+    'crispy_forms',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -121,6 +128,28 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# CKEditor Settings
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default':
+        {'toolbar': 'full',
+         'width': 'auto',
+         'extraPlugins': ','.join([
+             'codesnippet',
+             'youtube'
+         ]),
+         },
+}
+
+# Account Settings
+LOGIN_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/author/dashboard/'
+LOGOUT_REDIRECT_URL = '/account/logout/'
+
+# Email Settings (Development)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -161,3 +190,14 @@ MEDIA_ROOT = BASE_DIR  / 'media/'
 
 # Path where static files are stored
 STATIC_ROOT = BASE_DIR  / 'staticfiles/'
+
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, "blog/static"), os.path.join(BASE_DIR, "website/static"), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_FINDERS = [
+   "django.contrib.staticfiles.finders.FileSystemFinder",
+   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
+# Media files (User uploaded images)
+MEDIA_URL = 'fr/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

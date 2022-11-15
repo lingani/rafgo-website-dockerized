@@ -22,7 +22,7 @@ from django.utils.translation import gettext_lazy as _
 urlpatterns = [
     path('', views.index, name='Index'),
     path('home/', views.index, name='Index'),
-    path('blog/', views.blog, name='Blog'),
+    # path('blog/', views.blog, name='Blog'),
     path('blog-details/', views.blog_details, name='Blog Details'),
     path('member-details/', views.member_details, name='Member Details'),
     path('project-details/', views.project_details, name='Project Details'),    
