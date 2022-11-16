@@ -15,6 +15,8 @@ from blog.models.article_models import Article
 from blog.models.category_models import Category
 from blog.forms.blog.comment_forms import CommentForm
 
+from .menu import Menu
+menu_principal = Menu()
 
 class ArticleListView(ListView):
     context_object_name = "articles"
@@ -25,6 +27,7 @@ class ArticleListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(approved=True)
+        context['menu_principal'] = menu_principal.get_page_menus("blog")
         return context
 
 
@@ -43,7 +46,9 @@ class ArticleDetailView(DetailView):
             Article.objects.filter(category=self.object.category, status=Article.PUBLISHED).order_by('?')[:3]
         kwargs['article'] = self.object
         kwargs['comment_form'] = CommentForm()
+        kwargs['menu_principal'] = menu_principal.get_page_menus("blog")
         return super().get_context_data(**kwargs)
+
 
 
 class ArticleSearchListView(ListView):

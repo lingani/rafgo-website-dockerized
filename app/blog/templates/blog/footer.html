@@ -1,0 +1,77 @@
+    {% load i18n %}
+    {% load static %}
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>RAFGO</h3>
+              <p>3ème Étage Immeuble Pharmacie Belle-Ville,<br> Ave. de la Dignité, Ouaga, BFA
+                <br><br>
+                <strong>{% trans "Phone" %}:</strong> +226 6565 0311<br>
+                <strong>{% trans "Email" %}:</strong> contact@rafgo.org<br>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>{% trans "Liens Utiles" %}</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.opengovpartnership.org/fr/" target="_blank">{% trans "PGO" %}</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">{% trans "PGO - Page Afrique" %}</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://www.ogpstories.org/fr/" target="_blank">{% trans "Open Stories" %}</a></li>
+              <li><i class="bi bi-chevron-right" target="_blank"></i> <a href="https://www.pagof.fr/">{% trans "PAGOF" %}</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>{% trans "Ressources" %}</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../blog/">{% trans "Blog" %}</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="htts://shorturl.at/cdpQ3" target="_blank">{% trans "Données d'éligibilité au PGO" %}</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">{% trans "Le guide du PGO pour les sceptiques" %}</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">{% trans "Charte du RAFGO" %}</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>{% trans "Bulletins d'information" %}</h4>
+            <p>{% trans "Restez à jour avec le RAFGO en vous abonnant maintenant." %}</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+        <div class="d-flex flex-column align-items-center align-items-lg-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>RAFGO</span></strong>. {% trans "Tous Droits Reservés" %}
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+            Designed by <a href="#">JASON Corp.</a>
+          </div>
+        </div>
+
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
