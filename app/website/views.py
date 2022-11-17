@@ -21,7 +21,7 @@ def sampled_organizations(orgs):
 
 # Create your views here.
 def index(request):
-    articles = Article.objects.all()
+    featured_articles = Article.objects.filter(status=Article.PUBLISHED, featured=Article.FEATURED, deleted=False).order_by('-date_published')[:3]
     articles = Article.objects.filter(status=Article.PUBLISHED, deleted=False).order_by('-date_published')[:3]
 
     context = {
@@ -30,6 +30,7 @@ def index(request):
         'action_menu': {"href":"../home#join-us-form", "name":"Nous Rejoindre"},
         'orgs': orgs,
         'articles': articles,
+        'featured_articles': featured_articles,
         'sample_orgs': sampled_organizations(orgs),
         'countries': countries,
         "pays": [('Bénin', 'ben', "sampled"), ('Burkina Faso', 'bfa', "sampled" ), ('Burundi', 'bdi'), ('Cameroun', 'cmr'), ('République centrafricaine', 'rca', "sampled"), ('Comores', 'com'), ('Congo (RC)', 'cog', "sampled"), ('Congo (RDC)', 'rdc'), ("Côte d'lvoire", 'rci'), ('Djibouti', 'dji'), ('Gabon', 'gab'), ('Guinée', 'gin'), ('Guinée équatoriale', 'gnq'), ('Madagascar', 'mdg'), ('Mali', 'mli'), ('Niger', 'ner'), ('Rwanda', 'rwa'), ('Sénégal', 'sen'), ('Seychelles', 'syc'), ('Tchad', 'tcd'), ('Togo', 'tgo')]

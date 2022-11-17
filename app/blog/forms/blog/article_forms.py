@@ -44,8 +44,18 @@ class ArticleCreateForm(forms.ModelForm):
             (PUBLISHED, 'Publish'),
         )
 
+        # Article featured constants
+        FEATURED = "FEATURED"
+        NOT_FEATURED = "NOT FEATURED"
+
+        # CHOICES
+        FEATURED_CHOICES = (
+            (FEATURED, 'Featured'),
+            (NOT_FEATURED, 'Not Featured'),
+        )
+
         model = Article
-        fields = ["title", "category", "image", "image_credit", "lead_paragraph", "body", "tags", "status"]
+        fields = ["title", "category", "image", "image_featured", "image_credit", "lead_paragraph", "body", "tags", "featured", "status"]
         widgets = {
             'title': TextInput(attrs={
                                      'name': "article-title",
@@ -70,6 +80,15 @@ class ArticleCreateForm(forms.ModelForm):
 
                                ),
 
+            'image_featured': FileInput(attrs={
+                                        "class": "form-control clearablefileinput",
+                                        "type": "file",
+                                        "id": "featuredImage",
+                                        "name": "featured-image"
+                                      }
+
+                               ),
+
             'image_credit': TextInput(attrs={
                 'name': "image_credit",
                 'class': "form-control",
@@ -84,6 +103,15 @@ class ArticleCreateForm(forms.ModelForm):
                                      'id': "tags",
                                      'data-role': "tagsinput"
                                      }),
+            'featured': Select(choices=FEATURED_CHOICES,
+                             attrs=
+                             {
+                                 "class": "form-control selectpicker",
+                                 "name": "featured", "type": "text",
+                                 "id": "articleFeatured",
+                                 "data-live-search": "true",
+                                 "title": "Select Featured"
+                             }),
 
             'status': Select(choices=STATUS_CHOICES,
                              attrs=
@@ -93,8 +121,7 @@ class ArticleCreateForm(forms.ModelForm):
                                  "id": "articleStatus",
                                  "data-live-search": "true",
                                  "title": "Select Status"
-                             }
-                             ),
+                             })
         }
 
 
@@ -131,8 +158,18 @@ class ArticleUpdateForm(forms.ModelForm):
             (PUBLISHED, 'Publish'),
         )
 
+        # Article featured constants
+        FEATURED = "FEATURED"
+        NOT_FEATURED = "NOT FEATURED"
+
+        # CHOICES
+        FEATURED_CHOICES = (
+            (FEATURED, 'Featured'),
+            (NOT_FEATURED, 'Not Featured'),
+        )
+        
         model = Article
-        fields = ["title", "category", "image", "image_credit", "lead_paragraph", "body", "tags", "status"]
+        fields = ["title", "category", "image", "image_featured", "image_credit", "lead_paragraph", "body", "tags", "featured", "status"]
         widgets = {
             'title': TextInput(attrs={
                 'name': "article-title",
@@ -155,6 +192,16 @@ class ArticleUpdateForm(forms.ModelForm):
                 'id': "image_credit"
             }),
 
+            'featured': Select(choices=FEATURED_CHOICES,
+                             attrs=
+                             {
+                                 "class": "form-control selectpicker",
+                                 "name": "featured", "type": "text",
+                                 "id": "articleFeatured",
+                                 "data-live-search": "true",
+                                 "title": "Select Featured"
+                             }),
+
             'status': Select(choices=STATUS_CHOICES,
                              attrs=
                              {
@@ -163,16 +210,21 @@ class ArticleUpdateForm(forms.ModelForm):
                                  "id": "articleStatus",
                                  "data-live-search": "true",
                                  "title": "Select Status"
-                             }
-                             ),
+                             }),
+
 
             'image': FileInput(attrs={
                 "class": "form-control clearablefileinput",
                 "type": "file",
                 "id": "articleImage",
                 "name": "article-image",
-            }
+            }),
 
-            ),
+            'image_featured': FileInput(attrs={
+                "class": "form-control clearablefileinput",
+                "type": "file",
+                "id": "featuredImage",
+                "name": "featured-image",
+            })
 
         }

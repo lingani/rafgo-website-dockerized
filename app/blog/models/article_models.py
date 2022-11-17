@@ -26,6 +26,16 @@ class Article(models.Model):
         (PUBLISHED, 'Publish'),
     )
 
+    # Article featured constants
+    FEATURED = "FEATURED"
+    NOT_FEATURED = "NOT FEATURED"
+
+    # CHOICES
+    FEATURED_CHOICES = (
+        (FEATURED, 'Featured'),
+        (NOT_FEATURED, 'Not Featured'),
+    )
+    
     # BLOG MODEL FIELDS
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                  related_name='articles')
@@ -35,6 +45,8 @@ class Article(models.Model):
                                related_name='articles')
     image = models.ImageField(default='article-default.jpg',
                               upload_to='article_pics')
+    image_featured = models.ImageField(default='article-default.jpg',
+                              upload_to='article_pics')
     image_credit = models.CharField(max_length=250, null=True, blank=True)
     lead_paragraph = models.CharField(max_length=500, null=True, blank=True)
     body = RichTextUploadingField(blank=True)
@@ -43,6 +55,8 @@ class Article(models.Model):
                                           default=timezone.now)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    featured = models.CharField(max_length=20, choices=FEATURED_CHOICES,
+                              default='NOT FEATURED')
     status = models.CharField(max_length=10, choices=STATUS_CHOICES,
                               default='DRAFT')
     views = models.PositiveIntegerField(default=0)

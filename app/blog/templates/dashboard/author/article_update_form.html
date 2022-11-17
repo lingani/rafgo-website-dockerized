@@ -46,6 +46,12 @@
                                     {{ article_update_form.image }}
                               </div>
                               <div class="form-group">
+                                <label for="articleImage">Upload Article Featured Image*</label>
+                                  <h6 class="text-danger">{{ article_update_form.image_featured.errors }}</h6>
+                                  Current image: <a class="text-danger" href="{{ article.image_featured.url }}">{{ article.image_featured }}</a>
+                                    {{ article_update_form.image_featured }}
+                              </div>
+                              <div class="form-group">
                                 <label for="image_credit">Image Credit</label>
                                     <h6 class="text-danger">{{ article_update_form.image_credit.errors }}</h6>
                                     {{ article_update_form.image_credit }}
@@ -68,6 +74,11 @@
                                          value="{% for tag in article.tags.all %}{{ tag }},{% endfor %}">
                               <small id="hint_id_tags" class="form-text text-muted">
                                   A comma-separated list of tags.</small>
+                              </div>
+                              <div class="form-group">
+                                <label for="featureImage">Featured*</label>
+                                  <h6 class="text-danger">{{ article_update_form.featured.errors }}</h6>
+                                   {{ article_update_form.featured }}
                               </div>
                               <div class="form-group">
                                 <label for="articleImage">Status*</label>

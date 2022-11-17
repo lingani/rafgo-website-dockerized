@@ -20,42 +20,25 @@
         </div>
       </div>
     </div><!-- End Carousel Item -->
-
+    
+    {% for article in featured_articles %}
     <div class="carousel-item">
       <div class="container">
         <div class="row justify-content-center gy-6">
 
           <div class="col-lg-8 col-md-12">
-            <img src="{% static 'assets/img/hero-carousel/lancement_rafgo.jpg' %}" alt="" class="img-fluid2 img">
+            <img src="{{article.image_featured.url}}" alt="" class="img-fluid2 img">
           </div>
 
           <div class="col-lg-9 text-center">
-            <h2>Lancement officiel du RAFGO</h2>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-            <a href="#featured-services" class="btn-get-started scrollto ">Lire l'article</a>
+            <h4>{{article.title}}</h4>
+            <p>{{article.lead_paragraph}}</p>
+            <a href="{{ article.get_absolute_url }}" class="btn-get-started scrollto ">Lire l'article</a>
           </div>
-
         </div>
       </div>
     </div><!-- End Carousel Item -->
-
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row justify-content-center gy-6">
-
-          <div class="col-lg-8 col-md-12">
-            <img src="{% static 'assets/img/hero-carousel/ogp_morroco_2022.jpg' %}" alt="" class="img-fluid2 img">
-          </div>
-
-          <div class="col-lg-9 text-center">
-            <h2>Réunion Afrique et Moyen-Orient du PGO</h2>
-            <p>OGPMorocco2022: une reunion à Marrakech sur le thème principal de l'amélioration des services publics dans la région</p>
-            <a href="#featured-services" class="btn-get-started scrollto ">Lire l'article</a>
-          </div>
-
-        </div>
-      </div>
-    </div><!-- End Carousel Item -->
+    {% endfor %}
 
     <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
