@@ -21,11 +21,15 @@ def sampled_organizations(orgs):
 
 # Create your views here.
 def index(request):
+    articles = Article.objects.all()
+    articles = Article.objects.filter(status=Article.PUBLISHED, deleted=False).order_by('-date_published')[:3]
+
     context = {
         'page' : "home",
         'menu_principal': menu_principal.get_page_menus("home"),
         'action_menu': {"href":"../home", "name":"Nous Rejoindre"},
         'orgs': orgs,
+        'articles': articles,
         'sample_orgs': sampled_organizations(orgs),
         'countries': countries,
         "pays": [('Bénin', 'ben', "sampled"), ('Burkina Faso', 'bfa', "sampled" ), ('Burundi', 'bdi'), ('Cameroun', 'cmr'), ('République centrafricaine', 'rca', "sampled"), ('Comores', 'com'), ('Congo (RC)', 'cog', "sampled"), ('Congo (RDC)', 'rdc'), ("Côte d'lvoire", 'rci'), ('Djibouti', 'dji'), ('Gabon', 'gab'), ('Guinée', 'gin'), ('Guinée équatoriale', 'gnq'), ('Madagascar', 'mdg'), ('Mali', 'mli'), ('Niger', 'ner'), ('Rwanda', 'rwa'), ('Sénégal', 'sen'), ('Seychelles', 'syc'), ('Tchad', 'tcd'), ('Togo', 'tgo')]
@@ -35,6 +39,7 @@ def index(request):
 
 def blog(request):
     articles = Article.objects.all()
+    articles = Article.objects.filter(status=Article.PUBLISHED, deleted=False)
     print([art.title for art in articles])
     context = {
         'articles': articles,

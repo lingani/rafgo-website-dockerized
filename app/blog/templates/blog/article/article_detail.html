@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-	<div class="slider" style="height: 400px; width: 100%;
+	<div class="slider" style="height: 200px; width: 100%;
     background-image: url({{ article.category.image.url }});
     background-size: contain" >
 	</div><!-- slider -->
@@ -23,8 +23,8 @@
 
 			<div class="row">
 
-				<div class="col-lg-1 col-md-0"></div>
-				<div class="col-lg-10 col-md-12">
+				<!-- <div class="col-lg-1 col-md-0"></div> -->
+				<div class="col-lg-12 col-md-12">
 
 					<figure class="main-post">
 
@@ -127,7 +127,7 @@
              {% if related_articles %}
 			<div class="row">
             {% for related_article in related_articles %}
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-6 col-md-6">
 					<div class="card h-100">
 						<div class="single-post post-style-1">
 

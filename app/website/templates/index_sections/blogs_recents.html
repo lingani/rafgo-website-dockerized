@@ -11,45 +11,20 @@
         </div>
 
         <div class="row">
-
+        {% for article in articles %}
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="post-box">
-              <div class="post-img"><img src="{% static 'assets/img/blog/blog-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="{{article.image.url}}" class="img-fluid" alt=""></div>
               <div class="meta">
-                <span class="post-date">Tue, December 12</span>
-                <span class="post-author"> / Julia Parker</span>
+                <span class="post-date">{{ article.date_published.date }}</span>
+                <span class="post-author"> / {{article.author.last_name}}</span>
               </div>
-              <h3 class="post-title">Projet commune Ouverte de BEOG NEERE: une formation des acteurs</h3>
-              <p>Illum voluptas ab enim placeat. Adipisci enim velit nulla. Vel omnis laudantium. Asperiores eum ipsa est officiis. Modi cupiditate exercitationem qui magni est...</p>
-              <a href="../blog-details" class="readmore stretched-link"><span>{% trans 'Lire Plus' %}</span><i class="bi bi-arrow-right"></i></a>
+              <h3 class="post-title">{{article.title}}</h3>
+              <p>{{article.lead_paragraph}} ...</p>
+              <a href="{{ article.get_absolute_url }}" class="readmore stretched-link"><span>{% trans 'Lire Plus' %}</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-box">
-              <div class="post-img"><img src="{% static 'assets/img/blog/blog-2.jpg' %}" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Fri, September 05</span>
-                <span class="post-author"> / Mario Douglas</span>
-              </div>
-              <h3 class="post-title">Fonds Genre Sahel: Lancement du projet à Dakar</h3>
-              <p>Voluptatem nesciunt omnis libero autem tempora enim ut ipsam id. Odit quia ab eum assumenda. Quisquam omnis aliquid necessitatibus tempora consectetur doloribus...</p>
-              <a href="../blog-details" class="readmore stretched-link"><span>{% trans 'Lire Plus' %}</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="post-box">
-              <div class="post-img"><img src="{% static 'assets/img/blog/blog-3.jpg' %}" class="img-fluid" alt=""></div>
-              <div class="meta">
-                <span class="post-date">Tue, July 27</span>
-                <span class="post-author"> / Lisa Hunter</span>
-              </div>
-              <h3 class="post-title">Séminaire PAGOF: Ouverture des travaux à Ouagadougou.</h3>
-              <p>Quia nam eaque omnis explicabo similique eum quaerat similique laboriosam. Quis omnis repellat sed quae consectetur magnam veritatis dicta nihil...</p>
-              <a href="../blog-details" class="readmore stretched-link"><span>{% trans 'Lire Plus' %}</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
+        {% endfor %}
 
         </div>
 
