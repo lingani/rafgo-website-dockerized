@@ -28,6 +28,8 @@ class ArticleListView(ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(approved=True)
         context['menu_principal'] = menu_principal.get_page_menus("blog")
+        context['action_menu'] = {"href":"../home#join-us-form", "name":"Nous Rejoindre"}    
+
         return context
 
 
@@ -46,7 +48,9 @@ class ArticleDetailView(DetailView):
             Article.objects.filter(category=self.object.category, status=Article.PUBLISHED).order_by('?')[:3]
         kwargs['article'] = self.object
         kwargs['comment_form'] = CommentForm()
-        kwargs['menu_principal'] = menu_principal.get_page_menus("blog")
+        kwargs['categories'] = Category.objects.filter(approved=True)
+        kwargs['menu_principal'] = menu_principal.get_page_menus("blog-details")
+        kwargs['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
         return super().get_context_data(**kwargs)
 
 

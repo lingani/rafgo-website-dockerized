@@ -27,7 +27,7 @@ def index(request):
     context = {
         'page' : "home",
         'menu_principal': menu_principal.get_page_menus("home"),
-        'action_menu': {"href":"../home", "name":"Nous Rejoindre"},
+        'action_menu': {"href":"../home#join-us-form", "name":"Nous Rejoindre"},
         'orgs': orgs,
         'articles': articles,
         'sample_orgs': sampled_organizations(orgs),

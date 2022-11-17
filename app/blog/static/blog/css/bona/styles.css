@@ -262,7 +262,7 @@ header .src-area .src-btn{ position: absolute; top: 0; bottom: 0; left: 0;
 	border-bottom: 1px solid #eee; background: #fff; }
 
 .main-post .post-top-area,
-.main-post .post-bottom-area{ margin: 0 70px; }
+.main-post .post-bottom-area{ margin: 0 10px; }
 
 .main-post .pre-title{ margin-bottom: 20px; color: #777; }
 
