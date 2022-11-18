@@ -103,6 +103,8 @@ class ArticleSearchListView(ListView):
         """
         context = super(ArticleSearchListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(approved=True)
+        context['menu_principal'] = menu_principal.get_page_menus("blog-details")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}            
         return context
 
 
@@ -139,6 +141,10 @@ class TagArticlesListView(ListView):
             return []
 
     def get_context_data(self, **kwargs):
+        tag_name = self.kwargs.get('tag_name', '')
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.filter(approved=True)
+        context['menu_principal'] = menu_principal.get_page_menus("blog-details")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
+        context['tag_name'] = tag_name
         return context

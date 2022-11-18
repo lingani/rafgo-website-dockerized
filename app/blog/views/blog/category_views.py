@@ -45,6 +45,13 @@ class CategoriesListView(ListView):
     def get_queryset(self):
         return Category.objects.order_by('-date_created')
 
+    def get_context_data(self, **kwargs):
+        context = super(CategoriesListView, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.filter(approved=True)
+        context['menu_principal'] = menu_principal.get_page_menus("blog-category")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
+        return context
+
 
 class CategoryCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Category

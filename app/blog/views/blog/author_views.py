@@ -7,7 +7,10 @@ from django.views.generic import (
 
 # Blog application imports.
 from blog.models.article_models import Article
+from blog.models.article_models import Article, Category
 
+from .menu import Menu
+menu_principal = Menu()
 
 class AuthorArticlesListView(ListView):
     model = Article
@@ -23,6 +26,9 @@ class AuthorArticlesListView(ListView):
         context = super(AuthorArticlesListView, self).get_context_data(**kwargs)
         author = get_object_or_404(User, username=self.kwargs.get('username'))
         context['author'] = author
+        context['menu_principal'] = menu_principal.get_page_menus("blog-category")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
+        context['categories'] = Category.objects.filter(approved=True)
         return context
 
 
@@ -34,3 +40,10 @@ class AuthorsListView(ListView):
 
     def get_queryset(self):
         return User.objects.all().order_by('-date_joined')
+
+    def get_context_data(self, **kwargs):
+        context = super(AuthorsListView, self).get_context_data(**kwargs)
+        context['menu_principal'] = menu_principal.get_page_menus("blog-category")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
+        context['categories'] = Category.objects.filter(approved=True)
+        return context

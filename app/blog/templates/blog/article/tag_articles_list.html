@@ -1,4 +1,5 @@
 {% extends 'blog/blog_base.html' %}
+{% load i18n %}
 
 {% block title %}
  Tag Articles List
@@ -6,6 +7,23 @@
 
 {% block messages %}
 {% endblock messages %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog</h2>
+          <ol>
+            <li><a href="../../../home">{% trans 'Accueil' %}</a></li>
+            <li><a href="../../../blog">Blog</a></li>
+            <li style="color:blue"><a href="../../../blog/tag/{{tag_name}}/articles">Articles(tag:{{tag_name}})</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+{% endblock breadcrumbs %}
 
 {% block content %}
     {% if categories %}
@@ -69,7 +87,7 @@
             {% if tag_articles_list %}
 			<div class="row">
                 {% for article in tag_articles_list %}
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-6 col-md-6">
 					<div class="card h-100">
 						<div class="single-post post-style-1">
 
@@ -90,7 +108,7 @@
 								<h4 class="title"><a href="{{ article.get_absolute_url }}"><b>{{ article.title }}</b></a></h4>
 
 								<ul class="post-footer">
-									<li><a><i class="ion-ios-clock"></i>{{ article.read_time }} min{{ article.read_time|pluralize }} read</a></li>
+									<li><a><i class="ion-ios-clock"></i>{{ article.read_time }} min{{ article.read_time|pluralize }} {% trans 'lect.' %}</a></li>
 									<li><i class="ion-chatbubbles"></i>{{ article.comments.count }}</li>
 									<li><i class="ion-eye"></i>{{ article.views }}</li>
 								</ul>
