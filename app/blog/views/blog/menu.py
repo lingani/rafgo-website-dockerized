@@ -35,6 +35,17 @@ class Menu:
 		},
 
 		{
+			"page":"blog-category",  "menu_items": [
+			{"position": "1", "name":"Accueil", "href": "../../../home"},
+			{"position": "2", "name":"A Propos", "href": "../../../home/#about"},
+			{"position": "3", "name":"Notre Leadership", "href": "../../../home/#team"},
+			{"position": "4", "name":"Nos Membres", "href": "../../../home/#portfolio"},
+			{"position": "5", "name":"Nos Projets", "href": "../../../home/#services"},			
+			{"position": "6", "name":"Bolg", "href": "../../../blog"},
+			{"position": "7", "name":"Nous Contact", "href": "../../../home/#contact"},]
+		},
+		
+		{
 			"page":"member-details",  "menu_items": [
 			{"position": "1", "name":"Accueil", "href": "../home"},
 			{"position": "2", "name":"A Propos", "href": "../home/#about"},

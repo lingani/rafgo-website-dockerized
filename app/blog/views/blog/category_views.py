@@ -13,6 +13,8 @@ from django.views.generic import (
 # Blog application imports.
 from blog.models.article_models import Article, Category
 
+from .menu import Menu
+menu_principal = Menu()
 
 class CategoryArticlesListView(ListView):
     model = Article
@@ -28,6 +30,9 @@ class CategoryArticlesListView(ListView):
         context = super(CategoryArticlesListView, self).get_context_data(**kwargs)
         category = get_object_or_404(Category, slug=self.kwargs.get('slug'))
         context['category'] = category
+        context['categories'] = Category.objects.filter(approved=True)
+        context['menu_principal'] = menu_principal.get_page_menus("blog-category")
+        context['action_menu'] = {"href":"../../../home#join-us-form", "name":"Nous Rejoindre"}    
         return context
 
 
