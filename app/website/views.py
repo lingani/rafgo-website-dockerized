@@ -75,3 +75,6 @@ def project_details(request):
         'action_menu': {"href":"../home", "name":"Nous Rejoindre"}
     }
     return render(request, 'project-details.html', context)
+
+def error404(request):
+    return render(request, '404.html')

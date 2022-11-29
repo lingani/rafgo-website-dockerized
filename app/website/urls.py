@@ -25,5 +25,6 @@ urlpatterns = [
     path('blog2/', views.blog, name='Blog'),
     path('blog-details/', views.blog_details, name='Blog Details'),
     path('member-details/', views.member_details, name='Member Details'),
-    path('project-details/', views.project_details, name='Project Details'),    
+    path('project-details/', views.project_details, name='Project Details'),
+    path('404/', views.error404, name='Error404'),   
 ]
